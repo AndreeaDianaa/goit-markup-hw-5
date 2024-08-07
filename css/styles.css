@@ -9,6 +9,7 @@
   --cloud-color: #f4f4fd;
   --services-icons-background-color: #f5f4fa;
   --footer-social-media-hover-color: #31d0aa;
+  --modal-backdrop-color: #2e2f4266;
 }
 
 h1,
@@ -506,4 +507,293 @@ body {
 .social-media-footer-item a:focus {
   background-color: var(--footer-social-media-hover-color);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscribe-form {
+  margin-left: 80px;
+}
+
+.subscribe-title {
+  margin-bottom: 16px;
+  color: var(--white-text);
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+
+.email-field {
+  padding-left: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 264px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #ffffff;
+  background: rgba(33, 150, 243, 0);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  outline: none;
+}
+
+.email-field::placeholder {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  color: var(--white-text);
+}
+
+.button-footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: none;
+  border-radius: 4px;
+  background: var(--blue-color);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  width: 165px;
+  height: 40px;
+  color: var(--white-text);
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0.96px;
+  text-align: left;
+  padding: 8px 24px 8px 24px;
+  cursor: pointer;
+  position: relative;
+}
+
+.subscribe-icon {
+  position: absolute;
+  top: calc(50% - 12px);
+  right: 24px;
+}
+
+.email-and-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 24px;
+}
+
+/* Modal style */
+
+.modal-backdrop {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--modal-backdrop-color);
+  visibility: hidden;
+  z-index: 999;
+}
+
+.modal-backdrop.is-open {
+  visibility: initial;
+}
+
+.modal-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--white-text);
+  width: 408px;
+  border-radius: 4px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.btn-close-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 336px;
+  margin-top: 24px;
+  flex-shrink: 0;
+  padding: 8px;
+  background-color: var(--cloud-color);
+  border: 1px solid #0000001a;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.btn-close-modal:hover,
+.btn-close-modal:focus {
+  background-color: var(--blue-color);
+  fill: var(--white-text);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: var(--secondary-text-color);
+  margin-bottom: 16px;
+  margin-top: 24px;
+}
+
+.form-label {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  color: #8e8f99;
+}
+
+.text-field {
+  width: 360px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  outline: none;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 38px;
+  margin-bottom: 8px;
+}
+.input-container {
+  position: relative;
+}
+
+.input-container svg {
+  position: absolute;
+  top: calc(50% - 16px);
+  left: 12px;
+}
+
+.comments-area {
+  margin-top: 4px;
+  margin-bottom: 16px;
+  padding-left: 16px;
+  padding-top: 8px;
+  width: 360px;
+  height: 120px;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  outline: none;
+}
+
+.comments-area::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.14px;
+}
+
+.terms-and-conditions-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 8px;
+  cursor: pointer;
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+.terms-and-conditions-label span {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  color: #757575;
+}
+
+.terms-and-conditions-label span a {
+  color: var(--blue-color);
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.42px;
+}
+
+.terms-and-conditions-label svg {
+  position: absolute;
+  top: calc(50% - 8px);
+  left: 0;
+  stroke: #2e2f4266;
+  fill: none;
+}
+
+.terms-and-conditions-check:checked {
+  width: 16px;
+  height: 16px;
+}
+
+.terms-and-conditions-check:checked + label .icon-box {
+  stroke: #404bbf;
+}
+
+.terms-and-conditions-check:not(:checked) {
+  visibility: hidden;
+}
+
+.text-field:focus,
+.comments-area:focus {
+  border: 1px solid var(--blue-color);
+  cursor: pointer;
+  fill: var(--blue-color);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.text-field:focus + svg {
+  fill: var(--blue-color);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-container-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-modal {
+  width: 169px;
+  height: 56px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  padding: 16px 32px;
+  margin-bottom: 24px;
+  border-radius: 4px;
+  background: var(--blue-color);
+  box-shadow: 0px 4px 4px 0px #00000026;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-modal:hover,
+.button-modal:focus {
+  background-color: var(--hover-focus-color);
+  box-shadow: 0px 4px 4px 0px #00000026;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
