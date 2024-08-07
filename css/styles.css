@@ -573,6 +573,7 @@ body {
   position: absolute;
   top: calc(50% - 12px);
   right: 24px;
+  fill: currentColor;
 }
 
 .email-and-button-container {
