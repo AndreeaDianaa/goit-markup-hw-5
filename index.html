@@ -529,7 +529,7 @@
         <div class="subscribe-container">
           <p class="subscribe-title">Subscribe</p>
           <form class="subscribe-form">
-            <label for="email-footer">
+            <label class="email-label-footer" for="email-footer">
               <input
                 class="email-field"
                 type="email"
@@ -560,9 +560,7 @@
           </svg>
         </button>
 
-        <p class="form-title">
-              Leave your information and we'll call you back
-            </p>
+        <p class="form-title">Leave your information and we'll call you back</p>
         <form class="contact-form">
           <div class="label-container">
             <label class="form-label" for="user-name">Name</label>
@@ -613,11 +611,11 @@
               </svg>
             </div>
           </div>
-          <div class="label-container">
+          <div class="label-container comment-label">
             <label class="form-label" for="user-comment">Comment</label>
             <textarea
               class="comments-area"
-              name="comment"
+              name="user-comment"
               id="user-comment"
               placeholder="Text input"
             ></textarea>
@@ -626,26 +624,23 @@
             <input
               type="checkbox"
               class="terms-and-conditions-check visually-hidden"
-               name="user-privacy" 
-             id="user-privacy"
-             value="true"
+              name="user-privacy"
+              id="user-privacy"
+              value="true"
             />
-            <label
-              class="terms-and-conditions-label"
-              for="user-privacy"
-            >I accept the terms and conditions of the
-                <a class="privacy-link" href="#">Privacy Policy</a>
-            <span class="svg-span">
-              <svg class="icon-box" width="10" height="8">
-                <use href="./images/icons.svg#icon-box"></use>
-              </svg>
-            </span> 
-              
+            <label class="terms-and-conditions-label" for="user-privacy">
+              <span class="svg-span">
+                <svg class="icon-box" width="10" height="8">
+                  <use href="./images/icons.svg#icon-box-hover"></use>
+                </svg>
+              </span>
+              <span>
+                I accept the terms and conditions of the
+              </span>
+              <a class="privacy-link" href="#">Privacy Policy</a>
             </label>
           </div>
-          <div class="button-container-modal">
             <button type="submit" class="button-modal">Send</button>
-          </div>
         </form>
       </div>
     </div>
